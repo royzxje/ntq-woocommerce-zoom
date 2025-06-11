@@ -1,23 +1,17 @@
 # WooCommerce Zoom Integration
 
-A comprehensive WordPress plugin that automatically creates Zoom meetings when WooCommerce orders are completed and sends meeting details to customers via email.
+A professional WordPress plugin that automatically creates Zoom meetings when WooCommerce orders are completed and sends meeting details to customers via email.
 
-## Features
+## 🚀 Features
 
-### 🚀 Core Functionality
+### Core Functionality
 - **Automatic Meeting Creation**: Creates Zoom meetings when orders reach specific status
-- **Multiple Zoom Accounts**: Support for multiple Zoom accounts with distribution rules
-- **Smart Distribution**: Assign meetings to different Zoom accounts based on products, categories, or custom rules
+- **Multiple Zoom Accounts**: Support for multiple Zoom accounts with distribution rules  
+- **Smart Distribution**: Assign meetings to different accounts based on products, categories, or custom rules
 - **Email Notifications**: Send beautiful HTML and plain text emails with meeting details
 - **Meeting Management**: Complete admin interface for managing meetings, accounts, and settings
 
-### 📧 Email System
-- **Custom WooCommerce Email**: Integrates seamlessly with WooCommerce email system
-- **HTML & Plain Text**: Beautiful responsive email templates
-- **Email Templates**: Customizable templates with dynamic placeholders
-- **Resend Functionality**: Resend meeting emails from order admin
-
-### 🎛️ Admin Interface
+### Admin Interface
 - **Dashboard**: Overview with statistics and recent activity
 - **Zoom Accounts Management**: Add, edit, test, and manage multiple Zoom accounts
 - **Distribution Rules**: Create rules to assign meetings to specific accounts
@@ -25,31 +19,20 @@ A comprehensive WordPress plugin that automatically creates Zoom meetings when W
 - **Settings**: Configurable options for meetings, emails, and logging
 - **Order Integration**: Meeting information displayed in WooCommerce orders
 
-### 🛠️ Product Settings
-- **Per-Product Configuration**: Enable/disable Zoom meetings per product
-- **Meeting Customization**: Custom duration, topic, agenda per product
-- **Scheduling Options**: Instant, relative, or fixed scheduling
-- **Meeting Options**: Password, waiting room, recording settings
-- **Bulk Actions**: Enable/disable Zoom for multiple products at once
-
-### 🎨 Frontend Features
+### Frontend Features
 - **Shortcodes**: Display meeting information anywhere on your site
 - **Countdown Timer**: Real-time countdown to meeting start
 - **Responsive Design**: Mobile-friendly meeting display
 - **Access Control**: Login requirements and order verification
-- **Meeting Join**: Direct links with Zoom app integration
 
-### 🔧 Technical Features
-- **Secure API Integration**: Encrypted storage of API credentials
+### Security & Performance
+- **Secure API Integration**: Encrypted storage of API credentials with AES-256
 - **JWT Authentication**: Secure Zoom API communication
 - **Database Optimization**: Custom tables for optimal performance
 - **Multi-language Support**: Translation ready with POT file
-- **Error Handling**: Comprehensive error logging and reporting
-- **Caching**: Performance optimization with transients
 
-## Installation
+## 📋 Requirements
 
-### Requirements
 - WordPress 5.0 or higher
 - WooCommerce 5.0 or higher
 - PHP 7.4 or higher
@@ -57,18 +40,21 @@ A comprehensive WordPress plugin that automatically creates Zoom meetings when W
 - Zoom Pro/Business/Enterprise account
 - Zoom JWT app credentials
 
-### Install via WordPress Admin
+## 📦 Installation
+
+### Method 1: WordPress Admin (Recommended)
 1. Download the plugin ZIP file
 2. Go to WordPress Admin > Plugins > Add New
-3. Click "Upload Plugin" and choose the ZIP file
+3. Click \"Upload Plugin\" and choose the ZIP file
 4. Install and activate the plugin
 
-### Install via FTP
-1. Extract the plugin files
-2. Upload the `woocommerce-zoom-integration` folder to `/wp-content/plugins/`
-3. Activate the plugin through WordPress Admin
+### Method 2: Git Clone
+```bash
+cd /wp-content/plugins/
+git clone https://github.com/royzxje/ntq-woocommerce-zoom.git woocommerce-zoom-integration
+```
 
-## Configuration
+## ⚙️ Configuration
 
 ### 1. Zoom API Setup
 1. Go to [Zoom Marketplace](https://marketplace.zoom.us/)
@@ -91,35 +77,35 @@ A comprehensive WordPress plugin that automatically creates Zoom meetings when W
 2. Configure email templates and options
 3. Test email delivery
 
-## Usage
+## 🎯 Usage
 
-### Automatic Meeting Creation
+### Automatic Workflow
 1. Customer places an order
 2. Order reaches configured status (default: completed)
 3. Plugin matches distribution rules
 4. Zoom meeting is created automatically
 5. Email is sent to customer with meeting details
 
-### Manual Actions
-- **Resend Email**: Resend meeting email from order admin
-- **Create Meeting**: Manually create meeting for existing orders
-- **View Details**: See meeting information in order meta box
-
 ### Shortcodes
 Display meeting information on frontend:
 
 ```php
 // Basic meeting info
-[zoom_meeting_info order_id="123"]
+[zoom_meeting_info order_id=\"123\"]
 
 // Join button
-[zoom_join_button order_id="123"]
+[zoom_join_button order_id=\"123\"]
 
 // Countdown timer
-[zoom_countdown order_id="123"]
+[zoom_countdown order_id=\"123\"]
 ```
 
-## Customization
+### Manual Actions
+- **Resend Email**: Resend meeting email from order admin
+- **Create Meeting**: Manually create meeting for existing orders
+- **View Details**: See meeting information in order meta box
+
+## 🎨 Customization
 
 ### Email Templates
 Override email templates in your theme:
@@ -128,8 +114,7 @@ Override email templates in your theme:
 /wp-content/themes/your-theme/woocommerce/emails/plain/zoom-meeting-details.php
 ```
 
-### Styling
-Customize frontend appearance:
+### Frontend Styling
 ```css
 .zoom-meeting-info { /* Your styles */ }
 .zoom-join-button { /* Your styles */ }
@@ -148,47 +133,41 @@ do_action('wc_zoom_after_create_meeting', $order_id, $meeting_data);
 apply_filters('wc_zoom_meeting_data', $meeting_data, $order_id);
 ```
 
-## Support
+## 📊 Monitoring
 
-### Documentation
-- Full documentation available in plugin files
-- Developer guide for customization
-- Troubleshooting guide for common issues
-
-### Logs
+### Activity Logs
 Monitor plugin activity in **WooCommerce > Zoom Integration > Logs**
+- Meeting creation/deletion events
+- API call success/failures
+- Email sending status
+- Distribution rule matches
 
-### Requirements Check
-The plugin automatically checks for required dependencies and displays notices for missing requirements.
+### Debug Mode
+Enable debug mode in plugin settings for detailed logging.
 
-## License
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Make your changes
+4. Commit your changes: `git commit -am 'Add new feature'`
+5. Push to the branch: `git push origin feature/new-feature`
+6. Submit a pull request
+
+## 📝 License
 
 This plugin is licensed under the GPL v2 or later.
 
-## Changelog
+## 🔗 Links
 
-### 1.0.0
-- Initial release
-- Core functionality implementation
-- Admin interface
-- Email system
-- Frontend shortcodes
-- Security features
-- Multi-language support
+- **GitHub**: [https://github.com/royzxje/ntq-woocommerce-zoom](https://github.com/royzxje/ntq-woocommerce-zoom)
+- **Author Website**: [https://q2k1.com/](https://q2k1.com/)
+- **Support**: Create an issue on GitHub
 
-## Contributing
+## 📞 Support
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## Author
-
-**ntquan**
-- Website: [q2k1.com](https://q2k1.com/)
-- GitHub: [@royzxje](https://github.com/royzxje)
+For support, please create an issue on GitHub or contact the developer.
 
 ---
 
-Made with ❤️ for the WordPress community
+**Made with ❤️ for the WordPress community**
